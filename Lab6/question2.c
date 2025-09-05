@@ -7,7 +7,7 @@ int main(){
     int x;
     SystemInit();
     SystemCoreClockUpdate();
-    LPC_PINCON->PINSEL0=0;
+    LPC_PINCON->PINSEL0&=~(1<<4);
     LPC_GPIO0->FIODIR=1<<4;
     LPC_PINCON->PINSEL4=0;
     LPC_GPIO2->FIODIR=0;
